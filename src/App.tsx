@@ -52,14 +52,14 @@ export const App = (): JSX.Element => {
                   </span>
                 ) : (
                   <span className="bg-gray-400 px-2 py-[2px] rounded-full text-gray-200 text-xs">
-                    { totalCompleted } de { totalTodos }
+                    { totalCompleted.length } de { totalTodos }
                   </span>
                 ) }
               </p>
             </div>
 
             <div className="mt-6 py-16 flex flex-col items-center justify-center gap-4">
-              { todos.length > 0 && todos.length === totalCompleted && (
+              { todos.length > 0 && todos.length === totalCompleted.length && (
                 <div className="mb-4 flex items-center justify-center gap-2">
                   <CheckCircle className="text-secondary-mid text-2xl" />
 
